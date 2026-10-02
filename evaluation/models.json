@@ -1,0 +1,38 @@
+{
+  "1.7B": {
+    "repository": "starrylay/RC-OPD",
+    "subfolder": "RC-OPD-1.7B",
+    "base_model": "Qwen/Qwen3-1.7B",
+    "adapter_sha256": "8588dd367d528f7257f7ab5fcb635978006c89d76a1c13a2f774ea4f1e52b59d",
+    "avg4_pct": {
+      "aime24": 54.166666666666664,
+      "aime25": 47.5,
+      "hmmt25": 30.833333333333336
+    },
+    "mean_pct": 44.166666666666664
+  },
+  "4B": {
+    "repository": "starrylay/RC-OPD",
+    "subfolder": "RC-OPD-4B",
+    "base_model": "Qwen/Qwen3-4B",
+    "adapter_sha256": "a5e1c5ba7f9ede1e730381144f2ea258bd35d9428982f988e8d056136aef33c6",
+    "avg4_pct": {
+      "aime24": 78.33333333333333,
+      "aime25": 69.16666666666667,
+      "hmmt25": 50.83333333333333
+    },
+    "mean_pct": 66.1111111111111
+  },
+  "8B": {
+    "repository": "starrylay/RC-OPD",
+    "subfolder": "RC-OPD-8B",
+    "base_model": "Qwen/Qwen3-8B",
+    "adapter_sha256": "86a59270bb8cfceaf5bb2b31da07329cac26582affbda07b0f250d6b5b94594f",
+    "avg4_pct": {
+      "aime24": 78.33333333333333,
+      "aime25": 76.66666666666667,
+      "hmmt25": 45.83333333333333
+    },
+    "mean_pct": 66.94444444444444
+  }
+}

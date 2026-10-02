@@ -1,0 +1,7 @@
+torch==2.8.0
+vllm==0.11.0
+transformers==4.57.1
+datasets==3.6.0
+math-verify==0.8.0
+huggingface-hub>=0.34,<1
+tqdm>=4.66,<5
