@@ -10,7 +10,7 @@ Full OPSD-aligned evaluation: 30 problems per benchmark, four solutions per prob
 |---|---:|---:|---:|---:|
 | [RC-OPD-1.7B](https://huggingface.co/starrylay/RC-OPD/tree/main/RC-OPD-1.7B) | 54.17 | 47.50 | 30.83 | 44.17 |
 | [RC-OPD-4B](https://huggingface.co/starrylay/RC-OPD/tree/main/RC-OPD-4B) | 78.33 | 69.17 | 50.83 | 66.11 |
-| [RC-OPD-8B](https://huggingface.co/starrylay/RC-OPD/tree/main/RC-OPD-8B) | 78.33 | 76.67 | 45.83 | **66.94** |
+| [RC-OPD-8B](https://huggingface.co/starrylay/RC-OPD/tree/main/RC-OPD-8B) | 78.33 | 76.67 | 45.83 | 66.94 |
 
 📝 This work is under review. Training code will be released after review. Evaluation code is available below.
 
