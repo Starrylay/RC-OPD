@@ -110,6 +110,18 @@ Please reason step by step, and put your final answer within \boxed{}.
 Benchmarks download automatically: [AIME24](https://huggingface.co/datasets/HuggingFaceH4/aime_2024), [AIME25](https://huggingface.co/datasets/yentinglin/aime_2025), and [HMMT25](https://huggingface.co/datasets/MathArena/hmmt_feb_2025), using their full `train` splits. Sampling and runtime differences can change scores between runs; the table records the released checkpoints' measured results.
 
 
-## 📄 License
+## 📄 Citation
 
-[Apache-2.0](LICENSE). Models and datasets retain their respective licenses.
+If you find this work useful, please cite our paper:
+
+```bibtex
+@misc{shen2026learningrepairedreasoningrootcauseguided,
+  title         = {Learning from Repaired Reasoning: Root-Cause-Guided On-Policy Distillation},
+  author        = {Chenglei Shen and Haoyang Yao and Weijie Yu and Song Jin and Xiao Zhang and Jun Xu},
+  year          = {2026},
+  eprint        = {2610.03515},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  url           = {https://arxiv.org/abs/2610.03515}
+}
+```
