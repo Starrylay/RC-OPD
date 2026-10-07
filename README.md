@@ -1,10 +1,24 @@
-# RC-OPD
+<h1 align="center">RC-OPD</h1>
 
-🤗 **[Checkpoints on Hugging Face](https://huggingface.co/starrylay/RC-OPD)**
+<p align="center">Qwen3 checkpoints and evaluation for mathematical reasoning</p>
 
-## 📊 Evaluation Results
+<div align="center">
 
-Full OPSD-aligned evaluation: 30 problems per benchmark, four solutions per problem. Scores are **Avg@4 (%)**, averaged across all generated solutions. Mean is the average across the three benchmarks.
+[![Models](https://img.shields.io/badge/Models-Hugging%20Face-yellow?logo=huggingface)](https://huggingface.co/starrylay/RC-OPD)
+[![Evaluation](https://img.shields.io/badge/Evaluation-Code-blue?logo=github)](evaluate.py)
+[![License](https://img.shields.io/badge/License-Apache%202.0-green)](LICENSE)
+
+</div>
+
+## 📣 Release Status
+
+Checkpoints and evaluation code are available. This work is **under review**; training code will be released after review.
+
+## 📦 Models & Results
+
+We release **1.7B, 4B, and 8B LoRA adapters** for the matching Qwen3 base models. Click a model below to download its checkpoint.
+
+Full OPSD-aligned evaluation: 30 problems per benchmark, four solutions per problem. **Avg@4 (%)** averages correctness across all generated solutions; Mean averages the three benchmarks.
 
 | Model | AIME24 | AIME25 | HMMT25 | Mean |
 |---|---:|---:|---:|---:|
@@ -12,11 +26,10 @@ Full OPSD-aligned evaluation: 30 problems per benchmark, four solutions per prob
 | [RC-OPD-4B](https://huggingface.co/starrylay/RC-OPD/tree/main/RC-OPD-4B) | 78.33 | 69.17 | 50.83 | 66.11 |
 | [RC-OPD-8B](https://huggingface.co/starrylay/RC-OPD/tree/main/RC-OPD-8B) | 78.33 | 76.67 | 45.83 | 66.94 |
 
-📝 This work is under review. Training code will be released after review. Evaluation code is available below.
 
-## 🚀 Download & evaluate
+## 🛠️ Setup
 
-The checkpoints are **LoRA adapters** and are evaluated with their matching Qwen3 base models. Use Linux, Python 3.10, and a CUDA GPU environment compatible with PyTorch 2.8.
+Use **Linux, Python 3.10, and CUDA compatible with PyTorch 2.8**.
 
 ```bash
 git clone https://github.com/Starrylay/RC-OPD.git
@@ -24,12 +37,20 @@ cd RC-OPD
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+```
 
-# Download the base model, adapter, and benchmarks; evaluate all three benchmarks.
+## 🚀 Quick Start
+
+One command downloads the base model, adapter, and benchmarks, then evaluates all three benchmarks:
+
+```bash
 python evaluate.py --size 1.7B --output results/1.7B
 ```
 
-Replace `1.7B` with `4B` or `8B` for the other models. Downloads are cached by Hugging Face; set `HF_HOME` to choose the cache location. No training setup or external diagnosis service is needed.
+Replace `1.7B` with `4B` or `8B` for the other models. Each run saves generated solutions, correctness labels, and protocol records; **`summary.json`** reports the three Avg@4 scores and their mean. Use a new output directory for each run.
+
+<details>
+<summary>More options: download only, multiple GPUs, and local checkpoints</summary>
 
 ```bash
 # Download model files first, without running evaluation.
@@ -44,7 +65,10 @@ python evaluate.py --checkpoint /path/to/RC-OPD-4B \
   --model-path /path/to/Qwen3-4B --dataset aime24 --output results/local-4B
 ```
 
-Each benchmark produces a JSON file with generated solutions and correctness labels, plus a protocol record. Running all three also writes **`summary.json`** with per-benchmark Avg@4 and their mean. Use a new output directory for each run.
+
+Downloads are cached by Hugging Face; set `HF_HOME` to choose the cache location. No training setup or external diagnosis service is needed.
+
+</details>
 
 ## 📝 Evaluation protocol
 
@@ -64,4 +88,7 @@ Please reason step by step, and put your final answer within \boxed{}.
 
 Benchmarks download automatically: [AIME24](https://huggingface.co/datasets/HuggingFaceH4/aime_2024), [AIME25](https://huggingface.co/datasets/yentinglin/aime_2025), and [HMMT25](https://huggingface.co/datasets/MathArena/hmmt_feb_2025), using their full `train` splits. Sampling and runtime differences can change scores between runs; the table records the released checkpoints' measured results.
 
-Code: [Apache-2.0](LICENSE). Models and datasets retain their respective licenses.
+
+## 📄 License
+
+[Apache-2.0](LICENSE). Models and datasets retain their respective licenses.
