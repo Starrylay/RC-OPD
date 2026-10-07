@@ -1,9 +1,10 @@
 <h1 align="center">RC-OPD</h1>
 
-<p align="center">Qwen3 checkpoints and evaluation for mathematical reasoning</p>
+<p align="center">Learning from Repaired Reasoning: Root-Cause-Guided On-Policy Distillation</p>
 
 <div align="center">
 
+[![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b?logo=arxiv)](https://arxiv.org/abs/2610.03515)
 [![Models](https://img.shields.io/badge/Models-Hugging%20Face-yellow?logo=huggingface)](https://huggingface.co/starrylay/RC-OPD)
 [![Evaluation](https://img.shields.io/badge/Evaluation-Code-blue?logo=github)](evaluate.py)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green)](LICENSE)
@@ -14,7 +15,27 @@
 
 Checkpoints and evaluation code are available. This work is **under review**; training code will be released after review.
 
-## 📦 Models & Results
+## 💡 Overview
+
+**RC-OPD** learns from local repairs of the student's own reasoning through three components:
+
+1. **Diagnose:** locate the earliest substantive error, repair it into an anchor stage, and explain the correction.
+2. **Iterative Counterfactual Validation:** let the student continue from the repair and check whether it reaches a correct answer.
+3. **Differentiated Distillation:** use diagnosis-guided supervision for erroneous segments and anchor-guided supervision for valid prefixes, with reference-based fallback when repair fails.
+
+![RC-OPD framework: diagnosis, iterative counterfactual validation, and differentiated distillation](images/framework.png)
+
+*Figure 4 from the [paper](https://arxiv.org/pdf/2610.03515#page=5).*
+
+## 📊 Main Results
+
+Comparison with baselines across Qwen3-1.7B, 4B, and 8B on AIME24, AIME25, and HMMT25. The paper reports RC-OPD results averaged over three independent training seeds. SFT and GRPO use a different evaluation protocol and are included for context only.
+
+![Table 1: main experimental results across three Qwen3 model sizes and three mathematical reasoning benchmarks](images/main-results.png)
+
+*Table 1 from the [paper](https://arxiv.org/pdf/2610.03515#page=8). Click the image to view it at full resolution.*
+
+## 📦 Released Checkpoints
 
 We release **1.7B, 4B, and 8B LoRA adapters** for the matching Qwen3 base models. Click a model below to download its checkpoint.
 
