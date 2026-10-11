@@ -5,7 +5,7 @@
 <div align="center">
 
 [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b?logo=arxiv)](https://arxiv.org/abs/2610.03515)
-[![Models](https://img.shields.io/badge/Models-Hugging%20Face-yellow?logo=huggingface)](https://huggingface.co/starrylay/RC-OPD)
+[![Models](https://img.shields.io/badge/Models-Hugging%20Face-yellow?logo=huggingface)](https://huggingface.co/collections/starrylay/rc-opd)
 [![Evaluation](https://img.shields.io/badge/Evaluation-Code-blue?logo=github)](evaluate.py)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green)](LICENSE)
 
