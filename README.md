@@ -13,7 +13,7 @@
 
 ## 📣 Release Status
 
-Checkpoints and evaluation code are available. This work is **under review**; training code will be released after review.
+Checkpoints and evaluation code are available. 
 
 ## 💡 Overview
 
